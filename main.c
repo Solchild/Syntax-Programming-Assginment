@@ -58,7 +58,7 @@ int main(int argz, char char * argv[]) {
   printf("ERROR - cannot open front.in \n");
   else {
     size = fileSize(argv[1]);
-    printf("File size: %ld\n", size);
+    printf("File size: %d\n", size);
     getChar();
     
     // main processing loop
