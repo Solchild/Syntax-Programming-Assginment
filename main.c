@@ -100,7 +100,8 @@ void  term() {
   printf("Enter <term>\n");
   /* Parse the first factor */  
   factor();
-  /* As long as the next token is * or /, get the   next token and parse the next factor */ while  (nextToken == MULT_OP || nextToken == DIV_OP) {    
+  /* As long as the next token is * or /, get the   next token and parse the next factor */ 
+  while  (nextToken == MULT_OP || nextToken == DIV_OP) {    
     lex();    
     factor();  
   }  
@@ -114,7 +115,8 @@ void  expr() {
   printf("Enter <expr>\n");
   /* Parse the first term */  
   term();
-  /* As long as the next token is + or -, get   the next token and parse the next term */  while  (nextToken == ADD_OP || nextToken == SUB_OP) {    
+  /* As long as the next token is + or -, get   the next token and parse the next term */  
+  while  (nextToken == ADD_OP || nextToken == SUB_OP) {    
     lex();    
     term();  
   }  
