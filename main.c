@@ -16,6 +16,7 @@ int nextToken;
 FILE *in_fp, *fopen();
 char PATH[] = "src.in";
 int size = 0;
+int charIndex;
 
 /* Function declarations */
 void addChar();
@@ -204,6 +205,8 @@ void getChar() {
  }
  else
  charClass = EOF;
+ 
+ charIndex++;
 }
 /*****************************************************/
 /* getNonBlank - a function to call getChar until it
