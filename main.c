@@ -15,6 +15,7 @@ int token;
 int nextToken;
 FILE *in_fp, *fopen();
 char PATH[] = "src.in";
+int size = 0;
 
 /* Function declarations */
 void addChar();
@@ -42,7 +43,7 @@ void statement();
 
 /******************************************************/
 // gives size of the file
-off_t fsize(const char *filename) {
+off_t fileSize(const char *filename) {
     struct stat st; 
     if (statement(filename, &st) == 0)
         return st.st_size;
@@ -55,6 +56,8 @@ int main() {
   if ((in_fp = fopen(PATH, "r")) == NULL)
   printf("ERROR - cannot open front.in \n");
   else {
+    size = fileSize(PATH);
+    printf("File size: %ld\n", size);
     getChar();
     
     // main processing loop
