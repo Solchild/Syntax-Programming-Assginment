@@ -172,7 +172,7 @@ int lookup(char ch) {
       addChar();
       nextToken = DIV_OP;
       break;
-   case "=":
+   case '=':
       addChar();
       nextToken = ASSIGN_OP;
       break;
