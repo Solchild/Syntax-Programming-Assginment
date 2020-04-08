@@ -66,6 +66,8 @@ int main() {
       lex();
       statement();
     } while (nextToken != EOF);
+   
+   printf("Index: %d\n", charIndex);
   }
 }
 
