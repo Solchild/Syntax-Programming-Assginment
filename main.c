@@ -52,12 +52,12 @@ off_t fileSize(const char *filename) {
 }
 
 /* main driver */
-int main() {
+int main(int argz, char char * argv[]) {
 /* Open the input data file and process its contents */
-  if ((in_fp = fopen(PATH, "r")) == NULL)
+  if ((in_fp = fopen(argv[1], "r")) == NULL)
   printf("ERROR - cannot open front.in \n");
   else {
-    size = fileSize(PATH);
+    size = fileSize(argv[1]);
     printf("File size: %ld\n", size);
     getChar();
     
