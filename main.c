@@ -2,6 +2,9 @@
  arithmetic expressions */
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 /* Global declarations */
 /* Variables */
 int charClass;
@@ -38,6 +41,14 @@ void statement();
 #define RIGHT_PAREN 26
 
 /******************************************************/
+// gives size of the file
+off_t fsize(const char *filename) {
+    struct stat st; 
+    if (statement(filename, &st) == 0)
+        return st.st_size;
+    return -1; 
+}
+
 /* main driver */
 int main() {
 /* Open the input data file and process its contents */
